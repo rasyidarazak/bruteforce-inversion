@@ -10,4 +10,4 @@ function getInvCount(arr){
     return inv_count;
 }
 
-document.write("Number of inversions are "+ getInvCount(arr));
+// document.write("Number of inversions are "+ getInvCount(arr));
