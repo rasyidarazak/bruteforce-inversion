@@ -20,7 +20,7 @@ $("#addArr").on("click", function () {
     // Add value to array
     let val = document.getElementById("val").value;
     if (!isNaN(val)){
-        arr.push(val);
+        arr.push(parseInt(val));
     }
 
     // Show array in html
