@@ -37,3 +37,7 @@ $("#addArr").on("click", function () {
     });
 });
 
+    $("#reset").click(function(){
+        location.reload(true);
+    });
+
