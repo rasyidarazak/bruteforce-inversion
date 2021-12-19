@@ -1,3 +1,20 @@
 body {
   background-image: url("../img/ripples.png");
 }
+
+.card-header{
+  background-color: rgb(49, 49, 49);
+}
+
+.nav-link{
+  color: white!important;
+}
+
+.nav-link:hover{
+  border-color: rgb(49, 49, 49)!important;
+  background-color: rgb(80, 80, 80);
+}
+
+.nav-link.active{
+  color: black!important;
+}
