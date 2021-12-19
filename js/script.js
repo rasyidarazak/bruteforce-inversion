@@ -5,7 +5,7 @@ function getInvCount(arr){
     for(let i=0; i<arr.length-1; i++){
         for(let j=i+1; j<arr.length; j++){
             if(arr[i] > arr[j]) {
-                $('#inversion-value').append(" (" + arr[i] + "," +arr[j] + ") ");
+                $('#inversion-value').append("<span class='text-success my-2'> (" + arr[i] + "," +arr[j] + ")</span>");
                 inv_count++;
             }  
         }
@@ -22,14 +22,14 @@ $("#addArr").on("click", function () {
     }
 
     $("#arr").html("");
-    $('#arr').append("{ " + arr + " }");
+    $('#arr').append("<p class='text-success my-2'>{ " + arr + " }</p>");
 
     if (arr.length > 0){
-        $("#inversion-btn").html("<button type='button' class='btn btn-sm btn-dark' id='inversion-calculate'>Calculate Inversion</button>");
+        $("#inversion-btn").html("<button type='button' class='btn btn-sm btn-primary mb-2' id='inversion-calculate'>Calculate Inversion</button>");
     }
 
     $("#inversion-calculate").on("click", function () {
-        $("#inversion-result").html("Inversion Result = " + getInvCount(arr));
+        $("#inversion-result").html("<div class='alert alert-success mt-3'>Inversion Result = " + getInvCount(arr) + "</div>");
     });
 });
 

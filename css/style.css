@@ -12,6 +12,7 @@ body {
 
 .nav-link:hover{
   border-color: rgb(49, 49, 49)!important;
+  border-bottom-color: white !important;
   background-color: rgb(80, 80, 80);
 }
 
