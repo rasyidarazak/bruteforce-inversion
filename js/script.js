@@ -1,11 +1,11 @@
 // Brute force algorithm
 function getInvCount(arr){
     let inv_count = 0;
-    $('#invertion-value').html("");
+    $('#inversion-value').html("");
     for(let i=0; i<arr.length-1; i++){
         for(let j=i+1; j<arr.length; j++){
             if(arr[i] > arr[j]) {
-                $('#invertion-value').append(" (" + arr[i] + "," +arr[j] + ") ");
+                $('#inversion-value').append(" (" + arr[i] + "," +arr[j] + ") ");
                 inv_count++;
             }  
         }
@@ -25,11 +25,11 @@ $("#addArr").on("click", function () {
     $('#arr').append("{ " + arr + " }");
 
     if (arr.length > 0){
-        $("#invertion-btn").html("<button type='button' class='btn btn-sm btn-dark' id='invertion-calculate'>Calculate Invertion</button>");
+        $("#inversion-btn").html("<button type='button' class='btn btn-sm btn-dark' id='inversion-calculate'>Calculate Inversion</button>");
     }
 
-    $("#invertion-calculate").on("click", function () {
-        $("#invertion-result").html("Invertion Result = " + getInvCount(arr));
+    $("#inversion-calculate").on("click", function () {
+        $("#inversion-result").html("Inversion Result = " + getInvCount(arr));
     });
 });
 
