@@ -1,4 +1,4 @@
-// Brute Force Algorithm
+// Brute force algorithm
 function getInvCount(arr){
     let inv_count = 0;
     $('#invertion-value').html("");
@@ -13,21 +13,17 @@ function getInvCount(arr){
     return inv_count;
 }
 
-// Init array
+// Add value to array & show result
 arr = [];
-
 $("#addArr").on("click", function () {
-    // Add value to array
     let val = document.getElementById("val").value;
     if (!isNaN(val)){
         arr.push(parseInt(val));
     }
 
-    // Show array in html
     $("#arr").html("");
     $('#arr').append("{ " + arr + " }");
 
-    // Show button if array not empty
     if (arr.length > 0){
         $("#invertion-btn").html("<button type='button' class='btn btn-sm btn-dark' id='invertion-calculate'>Calculate Invertion</button>");
     }
@@ -37,7 +33,13 @@ $("#addArr").on("click", function () {
     });
 });
 
-    $("#reset").click(function(){
-        location.reload(true);
-    });
+// Reset button
+$("#reset").click(function(){
+    location.reload(true);
+});
 
+// Card navigation
+$('#myTab a').on('click', function (e) {
+    e.preventDefault()
+    $(this).tab('show')
+})

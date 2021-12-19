@@ -10,42 +10,66 @@
   </head>
   <body>
     <div class="container">
-      <h2 class="text-center mt-5">Brute Force Invertion</h2>
+      <div class="card text-center mt-4">
 
-      <div class="row justify-content-center text-center">
-          <div class="col-md-6">
-              <div class="row justify-content-center">
-                <div class="col-md-4">
-                  <div class="input-group">
-                    <select class="form-select form-select-sm" aria-label=".form-select-sm example" id="val">
-                      <option selected disabled>-</option>
-                      <option value="1">1</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      <option value="4">4</option>
-                      <option value="5">5</option>
-                      <option value="6">6</option>
-                      <option value="7">7</option>
-                      <option value="8">8</option>
-                      <option value="9">9</option>
-                      <option value="10">10</option>
-                    </select>             
-                    <button type="button" class="btn-sm btn btn-dark" id="addArr">Add</button>
-                    <button type="button" value="refresh" class="btn-sm btn btn-dark" id="reset">Reset</button>
+        <div class="card-header">
+          <ul class="nav nav-tabs card-header-tabs" id="myTab" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" id="invertion-tab" data-toggle="tab" href="#invertion" role="tab" aria-controls="invertion" aria-selected="true">Invertion</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="about-tab" data-toggle="tab" href="#about" role="tab" aria-controls="about" aria-selected="true">About</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="card-body tab-content" id="myTabContent">
+
+          <div class="tab-pane fade show active" id="invertion" role="tabpanel" aria-labelledby="invertion-tab">
+            <h3 class="text-center mt-5">Brute Force Invertion</h3>
+            <div class="row justify-content-center text-center">
+              <div class="col-md-6">
+                <div class="row justify-content-center">
+                  <div class="col-md-3">
+                    <div class="input-group">
+                      <select class="form-select form-select-sm" aria-label=".form-select-sm example" id="val">
+                        <option selected disabled>-</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                      </select>             
+                      <button type="button" class="btn-sm btn btn-dark" id="addArr">Add</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <div id="arr"></div>
+                    <div id="invertion-btn"></div>
+                    <div id="invertion-value"></div>
+                    <p id="invertion-result"></p>
                   </div>
                 </div>
               </div>
-              <div class="row">
-                <div class="col-md-12">
-                  <div id="arr"></div>
-                  <div id="invertion-btn"></div>
-                  <div id="invertion-value"></div>
-                  <p id="invertion-result"></p>
-                </div>
-              </div>
+            </div>
           </div>
+
+          <div class="tab-pane fade" id="about" role="tabpanel" aria-labelledby="about-tab">
+            <h3 class="text-center mt-5">About Brute Force Invertion</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet repellat sit obcaecati sapiente at doloribus tempora, a facere quisquam fugit odit possimus modi id reiciendis vero voluptatum in repudiandae corrupti adipisci rem! Numquam ea explicabo repellendus. Modi ut accusantium, nostrum laudantium vitae, facilis quaerat officia, nam quidem provident corrupti sed.</p>
+          </div>
+
+        </div>
       </div>
     </div>
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="js/jquery-3.6.0.min.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
