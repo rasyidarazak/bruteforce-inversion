@@ -11,7 +11,8 @@
   </head>
   <body>
     <div class="container">
-      <div class="card text-center my-4">
+      <div class="card text-center my-4 shadow">
+
         <div class="card-header text-white">
           <ul class="nav nav-tabs card-header-tabs" id="myTab" role="tablist">
             <li class="nav-item">
@@ -30,36 +31,16 @@
           <div class="tab-pane fade show active" id="inversion" role="tabpanel" aria-labelledby="inversion-tab">
             <h3 class="text-center">Brute Force Inversion</h3>
             <div class="row justify-content-center text-center">
-              <div class="col-md-6">
-                <div class="row justify-content-center">
-                  <div class="col-md-5">
-                    <div class="input-group">
-                      <select class="form-select form-select-sm" aria-label=".form-select-sm example" id="val">
-                        <option selected disabled>-</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                      </select>
-                      <button type="button" class="btn-sm btn btn-primary" id="addArr">Add</button>
-                      <button type="button" class="btn-sm btn btn-danger" id="reset">Reset</button>
-                    </div>
-                  </div>
+              <div class="col-md-12">
+                <div class="input-group mx-auto">
+                  <input type="number" class="form-control" placeholder="1..10" min="1" max="10" id="val">
+                  <button type="button" class="btn-sm btn btn-primary" id="addArr">Add</button>
+                  <button type="button" class="btn-sm btn btn-danger" id="reset">Reset</button>
                 </div>
-                <div class="row">
-                  <div class="col-md-12">
-                    <div id="arr"></div>
-                    <div id="inversion-btn"></div>
-                    <div id="inversion-value"></div>
-                    <div id="inversion-result"></div>
-                  </div>
-                </div>
+                <div id="arr" class="my-2"></div>
+                <div id="inversion-btn"></div>
+                <div id="inversion-value" class="my-2"></div>
+                <div id="inversion-result"></div>
               </div>
             </div>
           </div>
@@ -85,22 +66,21 @@
 
           <div class="tab-pane fade text-center" id="team" role="tabpanel" aria-labelledby="team-tab">
             <div class="row justify-content-center">
-              <div class="col-md-4">
-                <h5>-- Team --</h5>
-                <div class="list-group">
-                  <h6 class="my-2">Project Leader:</h6>
-                  <a href="https://github.com/nisasonia" class="list-group-item list-group-item-action list-group-item-danger">Nisa Sonia - 0619101073 <em>(presentation)</em></a>
-                  <h6 class="my-2">Member:</h6>
-                  <a href="https://github.com/SubagjaMartawijaya" class="list-group-item list-group-item-action">Subagja Martawijaya - 0619101077</a>
-                  <a href="https://github.com/rasyidarazak" class="list-group-item list-group-item-action">Rasyid Arazak Saputra - 0619101067</a>
-                  <a href="https://github.com/Aldhitya-creator" class="list-group-item list-group-item-action">Aldhitya Rayantama - 0619101075</a>
-                  <a href="https://github.com/inncnts" class="list-group-item list-group-item-action">Innocentius Vestra Elsaricho - 0619101069</a>
-                  <a href="https://github.com/rizkiep" class="list-group-item list-group-item-action">Rizki Edyana Putra - 0619101064</a>
+              <div class="col-md-12">
+                <h5>-- Team Member --</h5>
+                <div class="list-group mx-auto">
+                  <a href="https://github.com/nisasonia" target="_blank" class="list-group-item list-group-item-action">Nisa Sonia - 0619101073</a>
+                  <a href="https://github.com/SubagjaMartawijaya" target="_blank" class="list-group-item list-group-item-action">Subagja Martawijaya - 0619101077</a>
+                  <a href="https://github.com/rasyidarazak" target="_blank" class="list-group-item list-group-item-action">Rasyid Arazak Saputra - 0619101067</a>
+                  <a href="https://github.com/Aldhitya-creator" target="_blank" class="list-group-item list-group-item-action">Aldhitya Rayantama - 0619101075</a>
+                  <a href="https://github.com/inncnts" target="_blank" class="list-group-item list-group-item-action">Innocentius Vestra Elsaricho - 0619101069</a>
+                  <a href="https://github.com/rizkiep" target="_blank" class="list-group-item list-group-item-action">Rizki Edyana Putra - 0619101064</a>
                 </div>
               </div>
             </div>
           </div>
         </div>
+
       </div>
     </div>
 

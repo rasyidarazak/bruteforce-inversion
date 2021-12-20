@@ -5,7 +5,7 @@ function getInvCount(arr){
     for(let i=0; i<arr.length-1; i++){
         for(let j=i+1; j<arr.length; j++){
             if(arr[i] > arr[j]) {
-                $('#inversion-value').append("<span class='text-success my-2'> (" + arr[i] + "," +arr[j] + ")</span>");
+                $('#inversion-value').append("<span class='text-success'> (" + arr[i] + "," +arr[j] + ")</span>");
                 inv_count++;
             }  
         }
@@ -18,18 +18,23 @@ arr = [];
 $("#addArr").on("click", function () {
     let val = document.getElementById("val").value;
     if (!isNaN(val)){
-        arr.push(parseInt(val));
+        if (val<1 || val>10){
+            alert("Enter numbers more than equal to 1 and less than equal to 10!")
+        }else{
+            arr.push(parseInt(val));
+            $("#arr").html("");
+            $('#arr').append("{ " + arr + " }");
+        }
+    }else{
+        alert("Enter a number!")
     }
 
-    $("#arr").html("");
-    $('#arr').append("<p class='text-success my-2'>{ " + arr + " }</p>");
-
     if (arr.length > 0){
-        $("#inversion-btn").html("<button type='button' class='btn btn-sm btn-primary mb-2' id='inversion-calculate'>Calculate Inversion</button>");
+        $("#inversion-btn").html("<button type='button' class='btn btn-sm btn-success' id='inversion-calculate'>Calculate Inversion</button>");
     }
 
     $("#inversion-calculate").on("click", function () {
-        $("#inversion-result").html("<div class='alert alert-success mt-3'>Inversion Result = " + getInvCount(arr) + "</div>");
+        $("#inversion-result").html("<div class='alert alert-success d-inline-block'>Inversion Result = <span class='fw-bold'>" + getInvCount(arr) + "</span></div>");
     });
 });
 

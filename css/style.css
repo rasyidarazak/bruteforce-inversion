@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 body {
   background-image: url("../img/ripples.png");
+  font-family: 'Roboto', Arial, sans-serif;
 }
 
 .card-header{
-  background-color: rgb(49, 49, 49);
+  background-color: rgb(60, 60, 60);
 }
 
 .nav-link{
@@ -11,11 +14,18 @@ body {
 }
 
 .nav-link:hover{
-  border-color: rgb(49, 49, 49)!important;
-  border-bottom-color: white !important;
-  background-color: rgb(80, 80, 80);
+  border-color: transparent!important;
+  background-color: rgb(100, 100, 100);
 }
 
 .nav-link.active{
   color: black!important;
+}
+
+.input-group{
+  max-width: 180px;
+}
+
+.list-group{
+  max-width: 400px;
 }
