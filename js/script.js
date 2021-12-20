@@ -15,7 +15,7 @@ function getInvCount(arr){
 
 // Add value to array & show result
 arr = [];
-$("#addArr").on("click", function () {
+let addArray = function(){
     let val = document.getElementById("val").value;
     if (!isNaN(val)){
         if (val<1 || val>10){
@@ -36,6 +36,13 @@ $("#addArr").on("click", function () {
     $("#inversion-calculate").on("click", function () {
         $("#inversion-result").html("<div class='alert alert-success d-inline-block'>Inversion Result = <span class='fw-bold'>" + getInvCount(arr) + "</span></div>");
     });
+}
+$("#addArr").click(addArray)
+$("#val").keypress(function(event){
+    let keycode = (event.keyCode ? event.keyCode : event.which);
+    if(keycode == '13'){
+        addArray();
+    }
 });
 
 // Reset button
