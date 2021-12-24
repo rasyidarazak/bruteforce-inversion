@@ -36,14 +36,18 @@ let addArray = function(){
     $("#inversion-calculate").on("click", function () {
         $("#inversion-result").html("<div class='alert alert-success d-inline-block'>Inversion Result = <span class='fw-bold'>" + getInvCount(arr) + "</span></div>");
     });
+    $('#val').val('');
 }
+
 $("#addArr").click(addArray)
 $("#val").keypress(function(event){
     let keycode = (event.keyCode ? event.keyCode : event.which);
     if(keycode == '13'){
         addArray();
     }
-});
+
+}
+);
 
 // Reset button
 $("#reset").click(function(){
