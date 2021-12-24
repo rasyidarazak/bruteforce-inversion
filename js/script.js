@@ -24,21 +24,27 @@ let addArray = function () {
       arr.push(parseInt(val));
       $("#arr").html("");
       $("#arr").append("{ " + arr + " }");
+      $("#inversion-value").html("");
+      $("#inversion-result").html("");
     }
   } else {
     alert("Enter a number!");
   }
 
   if (arr.length > 0) {
-    $("#inversion-btn").html("<button type='button' class='btn btn-sm btn-success' id='inversion-calculate'>Calculate Inversion</button>");
-    $("#delete-btn").html("<button type='button' class='btn-sm btn btn-warning' id='delete'>Delete</button>");
+    $("#inversion-btn").html("<div class='btn-group'><button type='button' class='btn btn-sm btn-success' id='inversion-calculate'>Calculate Inversion</button><button type='button' class='btn-sm btn btn-danger' id='delete'>Delete</button></div>");
   }
 
   $("#inversion-calculate").on("click", function () {
     $("#inversion-result").html("<div class='alert alert-success d-inline-block'>Inversion Result = <span class='fw-bold'>" + getInvCount(arr) + "</span></div>");
   });
+  
+  $("#val").val("");
+
   // Delete button
   $("#delete").click(function () {
+    $("#inversion-value").html("");
+    $("#inversion-result").html("");
     if (arr.length === 0) {
       alert("Array null");
     } else {
@@ -47,10 +53,12 @@ let addArray = function () {
       $("#arr").append("{ " + arr + " }");
       if (arr.length === 0) {
         $("#arr").html("");
+        $("#inversion-btn").html("");
+        $("#inversion-value").html("");
+        $("#inversion-result").html("");
       }
     }
   });
-  $("#val").val("");
 };
 
 $("#addArr").click(addArray);
@@ -66,6 +74,9 @@ $("#reset").click(function () {
   //   location.reload(true);
   arr = [];
   $("#arr").html("");
+  $("#inversion-btn").html("");
+  $("#inversion-value").html("");
+  $("#inversion-result").html("");
 });
 
 // Card navigation
